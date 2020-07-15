@@ -112,8 +112,9 @@ bool testLine2dMulti()
 		cout << "Parameter of 2D line: < " << parameter.modelParam[0] << ", " <<
 			parameter.modelParam[1] << " >---< " << parameter.modelParam[2] << ", " <<
 			parameter.modelParam[3] << " > " << "  k: " << dy*1.0 / dx << endl;
-
-		line2D.getInliers(inliers);
+                //以下这一行错误
+		//line2D.getInliers(inliers);
+		line2D.getInliers();
 		line2D.removeInliders(pCloud2D, inliers);
 	}
 
